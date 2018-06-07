@@ -1,0 +1,230 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  border: 1px solid #989899;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #989899;
+}
+
+.btn {
+  border-radius: 0;
+  border-color: #D1D3D4;
+}
+
+.btn-badge {
+  padding: 1.01rem 1rem;
+}
+
+.current-color__title {
+  font-size: 25px;
+  text-transform: uppercase;
+  padding-top: 12px;
+  padding-left: 23px;
+  padding-right: 30px;
+  vertical-align: middle;
+}
+
+.current-color__badge {
+  width: 20px;
+  height: 20px;
+  background-color: #ffcc33;
+}
+
+.btn-caret {
+  padding: 0.7rem 1.1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.dropdown-menu {
+  border-radius: 3px;
+  display: block;
+  box-shadow: -1px 17px 30px -2px rgba(0, 0, 0, 0.28);
+}
+
+.dropdown-item:active {
+  background: #D1D3D4;
+}
+
+.color-list {
+  left: -151px;
+  top: 60px;
+}
+
+.color-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 200px;
+}
+
+.color-list__title {
+  color: #989899;
+  font-size: 20px;
+}
+
+.color-list__badge {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-left: 15px;
+}
+
+.slider-list {
+  left: -197px;
+  top: 60px;
+}
+
+.slider-list__item,
+.slider-list__item:hover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 300px;
+  color: #989899;
+  padding: 0.5rem 1.5rem;
+}
+
+.slider-list__item:active {
+  background: #D1D3D4;
+  color: #fff;
+}
+
+.slider-list__title {
+  margin-right: 1rem;
+  font-size: 20px;
+}
+
+.button-item {
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-item .btn-outline-success {
+  margin-left: 1rem !important;
+}
+
+.slider-red {
+  background: linear-gradient(90deg, rgb(237, 28, 36), rgb(0, 0, 0));
+}
+
+.slider-green {
+  background: linear-gradient(90deg, rgb(57, 181, 74), rgb(0, 0, 0));
+}
+
+.slider-blue {
+  background: linear-gradient(90deg, rgb(39, 170, 225), rgb(0, 0, 0));
+}
+
+.slider-red::-moz-range-track {
+  background: linear-gradient(90deg, rgb(237, 28, 36), rgb(0, 0, 0));
+}
+
+.slider-green::-moz-range-track {
+  background: linear-gradient(90deg, rgb(57, 181, 74), rgb(0, 0, 0));
+}
+
+.slider-blue::-moz-range-track {
+  background: linear-gradient(90deg, rgb(39, 170, 225), rgb(0, 0, 0));
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+label {
+  margin-left: 5px;
+  position: relative;
+  top: -2px;
+}
+
+input[type=range] {
+  height: 5px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #989899;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  background: #989899;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #989899;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  background: #989899;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-fill-upper {
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #989899;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  background: #989899;
+  cursor: pointer;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "react-rgb-color-picker",
+  "version": "1.0.0",
+  "author": "Stotsky Alex",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "color-convert": "^1.9.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

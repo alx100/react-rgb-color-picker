@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { string, func } from 'prop-types';
 import convert from 'color-convert';
 import OutsideClickDetector from './helpers/OutsideClickDetector';
 
 class DropdownSlider extends Component {
-  constructor(props){
-    super(props);
+  static propTypes = {
+    currentValue: string.isRequired, 
+    setSliderColor: func.isRequired, 
+    updateCurrentColor: func.isRequired, 
+    resetCurrentColor: func.isRequired
+  }
 
-    this.state = {
+  state = {
       show: false,
       red: 0,
       green: 0,
       blue: 0
     }
 
-    this.setCurrentColor = this.setCurrentColor.bind(this);
-    this.updateColor = this.updateColor.bind(this);
-    this.onConfirm = this.onConfirm.bind(this);
-    this.showMenu = this.showMenu.bind(this);
-    this.hideMenu = this.hideMenu.bind(this);
-    this.clearState = this.clearState.bind(this);
-  }
-
-  setCurrentColor() {
+  setCurrentColor = () => {
     const red = this.state.red,
           green = this.state.green,
           blue = this.state.blue,
@@ -31,7 +27,7 @@ class DropdownSlider extends Component {
     this.props.updateCurrentColor(currentColorHex);
   }
 
-  clearState() {
+  clearState = () => {
     this.setState({
       show: false,
       red: 0,
@@ -40,22 +36,22 @@ class DropdownSlider extends Component {
     });
   }
 
-  updateColor(e) {
+  updateColor = (e) => {
     this.setState({[e.target.name]: e.target.value});
     this.setCurrentColor();
   }
 
-  onConfirm() {
+  onConfirm = () => {
     this.props.setSliderColor();
     this.clearState();
   }
   
-  showMenu() {
+  showMenu = () => {
     this.props.resetCurrentColor();
     this.setState({show: true});
   }
   
-  hideMenu() {
+  hideMenu = () => {
     this.props.resetCurrentColor();
     this.clearState();
   }
@@ -122,13 +118,6 @@ class DropdownSlider extends Component {
       </div>
     );
   }
-}
-
-DropdownSlider.propTypes = {
-  currentValue: PropTypes.string.isRequired, 
-  setSliderColor: PropTypes.func.isRequired, 
-  updateCurrentColor: PropTypes.func.isRequired, 
-  resetCurrentColor: PropTypes.func.isRequired
 }
 
 export default DropdownSlider;

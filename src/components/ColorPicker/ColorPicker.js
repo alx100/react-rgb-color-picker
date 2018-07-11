@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import {string, array, func} from 'prop-types';
+
 import './ColorPicker.css';
 import Dropdown from './Dropdown';
 import DropdownSlider from './DropdownSlider';
@@ -11,31 +12,32 @@ class ColorPicker extends Component {
     this.state = {
       currentValue: ''
     }
+  }
 
-    this.setListColor = this.setListColor.bind(this);
-    this.setSliderColor = this.setSliderColor.bind(this);
-    this.updateCurrentColor = this.updateCurrentColor.bind(this);
-    this.resetCurrentColor = this.resetCurrentColor.bind(this);
+  static propTypes = {
+    value: string.isRequired,
+    colors: array.isRequired,
+    onChange: func.isRequired
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({currentValue: nextProps.value})
   }
 
-  updateCurrentColor(newColor) {
+  updateCurrentColor = (newColor) => {
     this.setState({currentValue: newColor});
   }
 
-  resetCurrentColor() {
+  resetCurrentColor = () => {
     this.setState({currentValue: this.props.value});
   }
 
-  setSliderColor() {
+  setSliderColor = () => {
     const sliderColor = this.state.currentValue;
     this.props.onChange(sliderColor);
   }
 
-  setListColor(e) {
+  setListColor = (e) => {
     e.preventDefault();
     const listColor = e.target.name;
     this.props.onChange(listColor);
@@ -63,12 +65,6 @@ class ColorPicker extends Component {
       </div>
     )
   }
-}
-
-ColorPicker.propTypes = {
-  value: PropTypes.string.isRequired,
-  colors: PropTypes.array.isRequired,
-  onChange: PropTypes.func.isRequired
 }
 
 export default ColorPicker;

@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { array, func } from 'prop-types';
 
 class Dropdown extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      show: false
-    }
-
-    this.showMenu = this.showMenu.bind(this);
-    this.hideMenu = this.hideMenu.bind(this);
+  static propTypes = {
+    colors: array.isRequired,
+    setListColor: func.isRequired
   }
 
-  showMenu() {
+  state = {
+    show: false
+  }
+
+  showMenu = () => {
     this.setState({show: true});
   }
 
-  hideMenu(e) {
+  hideMenu = (e) => {
     if(e && e.relatedTarget) {
       e.relatedTarget.click();
     }
@@ -25,7 +23,7 @@ class Dropdown extends Component {
   }
 
   render() {
-    const {colors} = this.props;
+    const { colors } = this.props;
 
     return (
       <div className="dropdown">
@@ -53,11 +51,6 @@ class Dropdown extends Component {
       </div>
     );
   }
-}
-
-Dropdown.propTypes = {
-  colors: PropTypes.array.isRequired,
-  setListColor: PropTypes.func.isRequired
 }
 
 export default Dropdown;

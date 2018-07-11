@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {string, array, func} from 'prop-types';
+import { string, array, func } from 'prop-types';
 
 import './ColorPicker.css';
 import Dropdown from './Dropdown';
